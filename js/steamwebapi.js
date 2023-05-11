@@ -1,5 +1,5 @@
-function getStats() {
-  const steamId = document.getElementById("steam-id").value;
+function getStats(input) {
+  const steamId = document.getElementById(input).value;
   const apiKey = "ae941d3c-598a-4fde-9b58-766e999f9c72";
   const url = `https://cors-anywhere.herokuapp.com/https://public-api.tracker.gg/v2/csgo/standard/profile/steam/${steamId}?TRN-Api-Key=${apiKey}`;
   fetch(url, {
