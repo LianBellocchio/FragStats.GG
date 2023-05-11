@@ -17,7 +17,7 @@ function getStats() {
       const totalDeaths = response.data.segments[0].stats.deaths.value;
       const totalRoundsPlayed = response.data.segments[0].stats.roundsPlayed.value;
       const kdRatio = response.data.segments[0].stats.kd.value;
-      const winPercentage = (response.data.segments[0].stats.wins.value / response.data.segments[0].stats.roundsPlayed.value) * 100;
+      const winPercentage = response.data.segments[0].stats.wlPercentage.value;
       const html = `<p>Kills totales: ${totalKills}</p>
                     <p>Muertes totales: ${totalDeaths}</p>
                     <p>Rondas jugadas: ${totalRoundsPlayed}</p>
@@ -30,5 +30,3 @@ function getStats() {
       document.getElementById("stats").innerHTML = "<p>Error al obtener estadísticas del jugador</p>";
     });
 }
-
-
