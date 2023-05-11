@@ -30,3 +30,15 @@ function getStats() {
       document.getElementById("stats").innerHTML = "<p>Error al obtener estadísticas del jugador</p>";
     });
 }
+
+const input = document.querySelector("#search-bar");
+const estadisticas = document.getElementById("estadisticas");
+input.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    getStats("#search-bar");
+    setTimeout(function () {
+      estadisticas.scrollIntoView({ behavior: "smooth" });
+    }, 1000);
+  }
+});
