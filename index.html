@@ -11,10 +11,6 @@
   <!-- las fuentes de Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Lato&family=Roboto&display=swap"
     rel="stylesheet">
-  <!-- los archivos JS -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/scrollspy.js"></script>
   <!-- Script consume api steam -->
   <script src="js/steamwebapi.js"></script>
   <!-- FontAwesome -->
@@ -76,7 +72,7 @@
       <p>Encuentra aquí las estadísticas más importantes de los mejores jugadores y equipos de CS:GO.</p>
       <div id="loading" style="display: none;">Cargando...</div>
 
-      <input type="text" id="steam-id">
+      <input type="text" id="steam-id" style="color: black;">
       <button onclick="getStats()">Obtener estadísticas</button>
       
       <div id="stats"></div>
@@ -103,5 +99,5 @@
   <footer>
     <p>&copy; FragStat.gg - Todos los derechos reservados</p>
   </footer>
-  <script src="js/main.js"></script>
+  <script src="js/steamwebapi.js"></script>
 </body>
