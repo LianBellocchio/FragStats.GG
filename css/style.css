@@ -40,7 +40,7 @@ header {
   padding: 0 32px;
   background-color: #24292e;
   color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .nav-bar ul {
@@ -63,7 +63,7 @@ header {
   left: 0;
   right: 0;
   height: 2px;
-  background-color: #FF9900;
+  background-color: #ff9900;
   transform: scaleX(0);
   transition: transform 0.2s ease-out;
 }
@@ -80,7 +80,7 @@ header {
 }
 
 .nav-bar a:hover {
-  color: #FF9900;
+  color: #ff9900;
 }
 
 /* Estilo de la barra de busqueda */
@@ -132,29 +132,25 @@ header {
   color: #ccc;
 }
 
-
 /* Estilos para la sección de presentación */
 
 .home-outer {
-  background: url('/images/cs-background.png') no-repeat center center fixed;
+  background: url("/images/cs-background.png") no-repeat center center fixed;
   background-size: cover;
   background-image: url(../img/banners/m4a4howl.jpg);
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: start;
-
 }
 
-
 .home-outer h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 40px;
   margin: 0;
   margin-bottom: 20px;
   color: #fff;
   font-weight: 700;
-
 }
 
 .home-outer p {
@@ -163,12 +159,12 @@ header {
   margin: 0;
   margin-bottom: 20px;
   color: #fff;
-
 }
 
 .home-outer .boton-principal {
-  display: inline-block;
+  display: block;
   padding: 1rem 2rem;
+  width: 300px;
   background-color: #dd9e37;
   color: #fff;
   font-size: 1.1rem;
@@ -177,12 +173,12 @@ header {
   border-radius: 5px;
   text-decoration: none;
   margin-top: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 10px;
   transition: all 0.4s ease;
 }
 
 .home-outer .boton-principal:hover {
-  box-shadow: 0 0 5px 0 rgba(255,255,255,0.5);
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.5);
   text-decoration: none;
 }
 
@@ -192,7 +188,7 @@ header {
   padding-right: 15px;
 }
 
-  .home-main {
+.home-main {
   color: #fff;
   padding: 16px 86px 146px;
   justify-content: start;
@@ -208,7 +204,6 @@ header {
 .home-main .home-info {
   font-size: 16px;
   padding-bottom: 16px;
-
 }
 /* Estilos para la sección de estadísticas */
 #estadisticas {
@@ -241,6 +236,80 @@ header {
   border-radius: 5px;
 }
 
+/* Estilos para equipos */
+
+#equipos {
+  background-color: #333;
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+
+#title_equipos img,
+#title_equipos h2 {
+  display: inline-block;
+  text-align: center;
+}
+#title_equipos img {
+  float: left;
+  width: 150px;
+  margin-right: 10px;
+}
+
+#button_equipos {
+  background-color: #dd9e37;
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 200px;
+  height: 30px;
+}
+#button_equipos:hover {
+  background-color: white;
+  color: black;
+}
+
+#tabla-competiciones {
+  font-family: "Open Sans", sans-serif;
+  font-size: small;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+}
+
+#tabla-competiciones td,
+#tabla-competiciones th {
+  border: 1px solid #fff;
+  padding: 8px;
+  width: 33.33%;
+  text-align: center;
+}
+
+#tabla-competiciones tr:nth-child(even) {
+  background-color: rgb(163, 153, 153);
+}
+
+#tabla-competiciones tr:hover {
+  background-color: rgb(0, 255, 0);
+}
+
+#tabla-competiciones th {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  background-color: #dd9e37;
+  color: black;
+}
 
 /* Estilos para el formulario de contacto */
 .formulary {
@@ -294,10 +363,9 @@ header {
   transition: all 0.4s ease;
 }
 
-
 .formulary input[type="submit"]:hover,
 .formulary button:hover {
-  box-shadow: 0 0 5px 0 rgba(255,255,255,0.5);
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.5);
   text-decoration: none;
 }
 

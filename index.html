@@ -1,126 +1,220 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Shortcut icon" href="img/icons/Templatelogo.png" />
+    <title>FragStats.GG - El sitio de estadisticas de CS:GO mas completo</title>
+    <!-- archivos CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- las fuentes de Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Lato&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- los archivos JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrollspy.js"></script>
+    <!-- Script consume api steam -->
+    <script src="js/steamwebapi.js"></script>
+    <script src="./js/equipos.js"></script>
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/c2239edec8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="Shortcut icon" href="img/icons/Templatelogo.png">
-  <title>FragStats.GG - El sitio de estadisticas de CS:GO mas completo</title>
-  <!-- archivos CSS -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <!-- las fuentes de Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Lato&family=Roboto&display=swap"
-    rel="stylesheet">
-  <!-- los archivos JS -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/scrollspy.js"></script>
-  <!-- Script consume api steam -->
-  <script src="js/steamwebapi.js"></script>
-  <!-- FontAwesome -->
-  <script src="https://kit.fontawesome.com/c2239edec8.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-  <header>
-    <nav class="Nav-Design">
-      <div class="logo">
-        <img src="img/icons/MainIcon.png" alt="MainIcon" /><a href="#"></a>
-      </div>
-      <div class="nav-bar">
-        <div class="nav-tools">
-          <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#estadisticas">Estadísticas</a></li>
-            <li><a href="#equipos">Equipos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
+  <body>
+    <header>
+      <nav class="Nav-Design">
+        <div class="logo">
+          <img src="img/icons/MainIcon.png" alt="MainIcon" /><a href="#"></a>
         </div>
-        <div class="search-bar">
-          <form class="search-bar-form" style="display: flex" action="search" method="get">
-            <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-search"></i></span>
-              <input type="text" id="search-bar" placeholder="Buscar Jugador (SteamID64)" />
-            </div>
-          </form>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section class="home-outer" style="background-color:rgba(35, 38, 45,0.6);">
-      <div class="container-fluid">
-        <div class="row">
-          <div id="home-intro">
-            <div class="home-main">
-              <h1>¡Bienvenidos a FragStats.gg!</h1>
-              <p class="home-info">El sitio de estadísticas más completo de Counter Strike: Global Offensive</p>
-              <div style="line-height:48px; font-size:18px; padding-bottom:30px;">
-                <img src="img/icons/valve-icon.png" height="22" alt="Official CS:GO Matchmaking"
-                  style="margin-right:25px;">+<img src="img/icons/esea.png" height="22" alt="ESEA"
-                  style="margin-left:22px; margin-right:25px;"><span style="line-height:48px;">+</span><img
-                  src="img/icons/faceit.png" height="20" alt="FACEIT" style="margin-left:25px; margin-right:25px;"><span
-                  style="line-height:70px;">+</span><img src="img/icons/Gamers_Club_logo.png" height="20"
-                  alt="Gamersclub" style="margin-left:25px;">
+        <div class="nav-bar">
+          <div class="nav-tools">
+            <ul>
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#estadisticas">Estadísticas</a></li>
+              <li><a href="#equipos">Equipos</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="search-bar">
+            <form
+              class="search-bar-form"
+              style="display: flex"
+              action="search"
+              method="get"
+            >
+              <div class="input-group">
+                <span class="input-group-addon"
+                  ><i class="fa fa-search"></i
+                ></span>
+                <input
+                  type="text"
+                  id="search-bar"
+                  placeholder="Buscar Jugador (SteamID64)"
+                />
               </div>
-              <a href="#estadisticas" class="boton-principal">Ver estadísticas</a>
-              <a href="#equipos" class="boton-principal">Ranking de equipos!</a>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section
+        class="home-outer"
+        style="background-color: rgba(35, 38, 45, 0.6)"
+      >
+        <div class="container-fluid">
+          <div class="row">
+            <div id="home-intro">
+              <div class="home-main">
+                <h1>¡Bienvenidos a FragStats.gg!</h1>
+                <p class="home-info">
+                  El sitio de estadísticas más completo de Counter Strike:
+                  Global Offensive
+                </p>
+                <div
+                  style="
+                    line-height: 48px;
+                    font-size: 18px;
+                    padding-bottom: 30px;
+                  "
+                >
+                  <img
+                    src="img/icons/valve-icon.png"
+                    height="22"
+                    alt="Official CS:GO Matchmaking"
+                    style="margin-right: 25px"
+                  />+<img
+                    src="img/icons/esea.png"
+                    height="22"
+                    alt="ESEA"
+                    style="margin-left: 22px; margin-right: 25px"
+                  /><span style="line-height: 48px">+</span
+                  ><img
+                    src="img/icons/faceit.png"
+                    height="20"
+                    alt="FACEIT"
+                    style="margin-left: 25px; margin-right: 25px"
+                  /><span style="line-height: 70px">+</span
+                  ><img
+                    src="img/icons/Gamers_Club_logo.png"
+                    height="20"
+                    alt="Gamersclub"
+                    style="margin-left: 25px"
+                  />
+                </div>
+                <a href="#estadisticas" class="boton-principal"
+                  >Ver estadísticas</a
+                >
+                <a href="#equipos" class="boton-principal"
+                  >Ranking de equipos!</a
+                >
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="estadisticas">
-      <h2>Estadísticas</h2>
-      <p>Encuentra aquí las estadísticas más importantes de los mejores jugadores y equipos de CS:GO.</p>
-      <div id="loading" style="display: none;">Cargando...</div>
+      <section id="estadisticas">
+        <h2>Estadísticas</h2>
+        <p>
+          Encuentra aquí las estadísticas más importantes de los mejores
+          jugadores y equipos de CS:GO.
+        </p>
+        <div id="loading" style="display: none">Cargando...</div>
 
-      <input type="text" id="steam-id" style="color: black;">
-      <button onclick="getStats()">Obtener estadísticas</button>
+        <input type="text" id="steam-id" style="color: black" />
+        <button onclick="getStats()">Obtener estadísticas</button>
 
-      <div id="stats"></div>
+        <div id="stats"></div>
 
+        <!-- código HTML para mostrar las estadísticas -->
+      </section>
+      <section id="equipos">
+        <div id="title_equipos">
+          <img id="podio" src="./img/icons/podium.png" alt="" />
+          <h2>Ranking Semanal de Equipos</h2>
+        </div>
 
-      <!-- código HTML para mostrar las estadísticas -->
-    </section>
-    <section id="equipos">
-      <h2>Equipos</h2>
-      <p>Conoce aquí los equipos más populares y sus respectivas estadísticas.</p>
-      <!-- código HTML para mostrar los equipos -->
-    </section>
-    <section class="formulary" id="form-contacto">
-      <h2>¿Tienes alguna duda o sugerencia? Contactanos llenando el siguiente formulario:</h2>
-      <div class="contenedor">
-       
-        <label for="name">Nombre<span> *</span></label>
-        <input name="name" required type="text" id="name" placeholder="Nombre">
+        <div>
+          <button id="button_equipos" onclick="mostrarRanking()">
+            Ver Ranking
+          </button>
+          <button id="button_equipos" onclick="mostrarTop3()">Top 3</button
+          ><br /><br />
+        </div>
 
-        <label for="email">Email<span> *</span></label>
-        <input name="email" type="text" id="email" required placeholder="Email">
+        <div id="tabla rankings">
+          <table id="tabla-competiciones">
+            <thead hidden>
+              <tr>
+                <th>AreaName</th>
+                <th>Name</th>
+                <th data-alias="puntaje">Puntaje</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
 
-        <label for="message">Mensaje<span> *</span></label>
-        <br>
-        <br>
-        <br>
+        <!-- código HTML para mostrar los equipos -->
+      </section>
+      <section class="formulary" id="form-contacto">
+        <h2>
+          ¿Tienes alguna duda o sugerencia? Contactanos llenando el siguiente
+          formulario:
+        </h2>
+        <div class="contenedor">
+          <label for="name">Nombre<span> *</span></label>
+          <input
+            name="name"
+            required
+            type="text"
+            id="name"
+            placeholder="Nombre"
+          />
 
-        <textarea name="message" id="message" cols="80" rows="10" placeholder="Mensaje"></textarea>
-        
-        <button class="boton-principal" type="submit">Enviar</button>
+          <label for="email">Email<span> *</span></label>
+          <input
+            name="email"
+            type="text"
+            id="email"
+            required
+            placeholder="Email"
+          />
 
-      </div>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; FragStat.gg - Todos los derechos reservados</p>
-  </footer>
-  <script src="js/steamwebapi.js"></script>
-  <script>
-    (function () {
-      emailjs.init("API_Key(Public_Key)");
-    })();
-  </script>
-  <script src="js/form-validation.js"></script>
-</body>
+          <label for="message">Mensaje<span> *</span></label>
+          <br />
+          <br />
+          <br />
+
+          <textarea
+            name="message"
+            id="message"
+            cols="80"
+            rows="10"
+            placeholder="Mensaje"
+          ></textarea>
+
+          <button class="boton-principal" type="submit">Enviar</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; FragStat.gg - Todos los derechos reservados</p>
+    </footer>
+    <script src="js/steamwebapi.js"></script>
+    <script>
+      (function () {
+        emailjs.init("API_Key(Public_Key)");
+      })();
+    </script>
+    <script src="js/form-validation.js"></script>
+  </body>
 </html>
