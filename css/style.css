@@ -92,53 +92,46 @@ header {
   transition: opacity 0.2s ease-out;
 }
 
-
-.search-bar-form {
+.search-bar {
   display: flex;
-  align-items: center;
-  width: 900px;
-  position: relative; /* Agregado */
-}
-
-
-.input-group {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  position: relative;
-  border-radius: 25px;
+  width: 35em;
 }
 
-.input-group-addon {
-  margin-right: 10px;
-  position: absolute; /* Agregado */
-  right: 0; /* Agregado */
+.search-bar .input-group {
+  display: flex;
+  align-items: center;
+  background-color: rgb(60, 63, 70);
+  border-radius: 19px;
+  padding: 0 10px;
+  width: 40rem;
+  height: 38px;
 }
 
-input[type="text"] {
-  border: none;
-  background-color: transparent;
-  color: white;
+.search-bar input[type="text"] {
+  flex: 1;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  color: #fff;
   font-size: 16px;
-  width: 100%;
-  padding-right: 30px; /* Agregado */
+  padding: 0 10px;
+}
+
+.search-bar input[type="text"]:focus {
   outline: none;
 }
 
-input[type="text"]::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+.search-bar .input-group-addon {
+  margin-left: 10px;
+  color: #fff;
+  cursor: pointer;
 }
 
-.fa-search {
-  color: white;
-  font-size: 20px;
-  opacity: 0.5;
-  transition: opacity 0.2s ease-out;
+.search-bar .input-group-addon:hover {
+  color: #ccc;
 }
 
-.fa-search:hover {
-  opacity: 1;
-}
 
 /* Estilos para la sección de presentación */
 
@@ -250,57 +243,66 @@ input[type="text"]::placeholder {
 
 
 /* Estilos para el formulario de contacto */
-#formulario {
-  background-color: #f2f2f2;
-  padding: 50px;
-  text-align: center;
+.formulary {
+  background-color: #24292e;
+  color: #fff;
+  padding: 20px;
+  display: block;
 }
 
-#formulario h2 {
-  margin: 0;
-  font-size: 2.5rem;
+.formulary h2 {
+  text-align: center;
+  font-size: 24px;
   margin-bottom: 20px;
 }
 
-#formulario form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.formulary .contenedor {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-#formulario label {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+.formulary label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 8px;
 }
 
-#formulario input[type="text"],
-#formulario input[type="email"],
-#formulario textarea {
+.formulary input,
+.formulary textarea {
   width: 100%;
   padding: 10px;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  border-radius: 5px;
+  font-size: 16px;
   border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-#formulario textarea {
+.formulary textarea {
   height: 150px;
 }
 
-#formulario button[type="submit"] {
-  background-color: #222;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1.2rem;
+.formulary .boton-principal {
+  width: 179px;
+  height: 50px;
+  text-align: center;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+  background-color: #dd9e37;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
 }
 
-#formulario button[type="submit"]:hover {
-  background-color: #444;
+
+.formulary input[type="submit"]:hover,
+.formulary button:hover {
+  box-shadow: 0 0 5px 0 rgba(255,255,255,0.5);
+  text-decoration: none;
+}
+
+.formulary span {
+  color: red;
 }
 
 /* Estilos para el footer */

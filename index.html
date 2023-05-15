@@ -4,13 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nombre del Sitio Web</title>
+  <link rel="Shortcut icon" href="img/icons/Templatelogo.png">
+  <title>FragStats.GG - El sitio de estadisticas de CS:GO mas completo</title>
   <!-- archivos CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
   <!-- las fuentes de Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Lato&family=Roboto&display=swap"
     rel="stylesheet">
+  <!-- los archivos JS -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scrollspy.js"></script>
   <!-- Script consume api steam -->
   <script src="js/steamwebapi.js"></script>
   <!-- FontAwesome -->
@@ -21,7 +26,7 @@
   <header>
     <nav class="Nav-Design">
       <div class="logo">
-        <img src="img/icons/MainIcon.png" alt="MainIcon"><a href="#"></a>
+        <img src="img/icons/MainIcon.png" alt="MainIcon" /><a href="#"></a>
       </div>
       <div class="nav-bar">
         <div class="nav-tools">
@@ -33,14 +38,13 @@
           </ul>
         </div>
         <div class="search-bar">
-          <form class="search-bar-form" style="display: flex;" action="search" method="get">
+          <form class="search-bar-form" style="display: flex" action="search" method="get">
             <div class="input-group">
-              <span class="input-group-addon"><i onclick="getStats(`#search-bar`)" class="fa fa-search"></span>
-              <input type="text" id="search-bar" placeholder="Buscar Jugador (Steam ID / Perfil de Steam / Steam URL)">
+              <span class="input-group-addon"><i class="fa fa-search"></i></span>
+              <input type="text" id="search-bar" placeholder="Buscar Jugador (SteamID64)" />
             </div>
           </form>
         </div>
-
       </div>
     </nav>
   </header>
@@ -61,6 +65,7 @@
                   alt="Gamersclub" style="margin-left:25px;">
               </div>
               <a href="#estadisticas" class="boton-principal">Ver estadísticas</a>
+              <a href="#equipos" class="boton-principal">Ranking de equipos!</a>
             </div>
           </div>
         </div>
@@ -74,9 +79,9 @@
 
       <input type="text" id="steam-id" style="color: black;">
       <button onclick="getStats()">Obtener estadísticas</button>
-      
+
       <div id="stats"></div>
-      
+
 
       <!-- código HTML para mostrar las estadísticas -->
     </section>
@@ -85,15 +90,26 @@
       <p>Conoce aquí los equipos más populares y sus respectivas estadísticas.</p>
       <!-- código HTML para mostrar los equipos -->
     </section>
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>¿Tienes alguna duda o sugerencia? Contáctanos llenando el siguiente formulario:</p>
-      <form action="formulario.php" method="POST">
-        <input type="text" name="nombre" placeholder="Nombre" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-        <button type="submit" class="boton-principal">Enviar</button>
-      </form>
+    <section class="formulary" id="form-contacto">
+      <h2>¿Tienes alguna duda o sugerencia? Contactanos llenando el siguiente formulario:</h2>
+      <div class="contenedor">
+       
+        <label for="name">Nombre<span> *</span></label>
+        <input name="name" required type="text" id="name" placeholder="Nombre">
+
+        <label for="email">Email<span> *</span></label>
+        <input name="email" type="text" id="email" required placeholder="Email">
+
+        <label for="message">Mensaje<span> *</span></label>
+        <br>
+        <br>
+        <br>
+
+        <textarea name="message" id="message" cols="80" rows="10" placeholder="Mensaje"></textarea>
+        
+        <button class="boton-principal" type="submit">Enviar</button>
+
+      </div>
     </section>
   </main>
   <footer>
@@ -101,3 +117,4 @@
   </footer>
   <script src="js/steamwebapi.js"></script>
 </body>
+</html>

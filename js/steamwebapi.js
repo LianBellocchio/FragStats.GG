@@ -67,3 +67,7 @@ function getStats() {
       document.getElementById("stats").innerHTML = "<p>Error al obtener estadísticas del jugador</p>";
     });
 }
+
+function calculatePercentage(value, max) {
+  return (value / max) * 100;
+}
