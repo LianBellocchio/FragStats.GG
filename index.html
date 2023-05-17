@@ -3,28 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="Shortcut icon" href="img/icons/Templatelogo.png" />
+    <link rel="Shortcut icon" href="./img/icons/Templatelogo.png" />
     <title>FragStats.GG - El sitio de estadisticas de CS:GO mas completo</title>
     <!-- archivos CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
     <!-- las fuentes de Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat&family=Lato&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <!-- los archivos JS -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scrollspy.js"></script>
-    <!-- Script consume api steam -->
-    <script src="js/steamwebapi.js"></script>
-    <script src="./js/equipos.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/scrollspy.js"></script>
     <!-- FontAwesome -->
     <script
       src="https://kit.fontawesome.com/c2239edec8.js"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -47,8 +42,7 @@
               class="search-bar-form"
               style="display: flex"
               action="search"
-              method="get"
-            >
+              method="get">
               <div class="input-group">
                 <span class="input-group-addon"
                   ><i class="fa fa-search"></i
@@ -56,8 +50,7 @@
                 <input
                   type="text"
                   id="search-bar"
-                  placeholder="Buscar Jugador (SteamID64)"
-                />
+                  placeholder="Buscar Jugador (SteamID64)" />
               </div>
             </form>
           </div>
@@ -67,8 +60,7 @@
     <main>
       <section
         class="home-outer"
-        style="background-color: rgba(35, 38, 45, 0.6)"
-      >
+        style="background-color: rgba(35, 38, 45, 0.6)">
         <div class="container-fluid">
           <div class="row">
             <div id="home-intro">
@@ -83,31 +75,30 @@
                     line-height: 48px;
                     font-size: 18px;
                     padding-bottom: 30px;
-                  "
-                >
+                  ">
                   <img
                     src="img/icons/valve-icon.png"
                     height="22"
                     alt="Official CS:GO Matchmaking"
-                    style="margin-right: 25px"
-                  />+<img
+                    style="margin-right: 25px" />+<img
                     src="img/icons/esea.png"
                     height="22"
                     alt="ESEA"
-                    style="margin-left: 22px; margin-right: 25px"
-                  /><span style="line-height: 48px">+</span
+                    style="margin-left: 22px; margin-right: 25px" /><span
+                    style="line-height: 48px"
+                    >+</span
                   ><img
                     src="img/icons/faceit.png"
                     height="20"
                     alt="FACEIT"
-                    style="margin-left: 25px; margin-right: 25px"
-                  /><span style="line-height: 70px">+</span
+                    style="margin-left: 25px; margin-right: 25px" /><span
+                    style="line-height: 70px"
+                    >+</span
                   ><img
                     src="img/icons/Gamers_Club_logo.png"
                     height="20"
                     alt="Gamersclub"
-                    style="margin-left: 25px"
-                  />
+                    style="margin-left: 25px" />
                 </div>
                 <a href="#estadisticas" class="boton-principal"
                   >Ver estadísticas</a
@@ -177,8 +168,7 @@
             required
             type="text"
             id="name"
-            placeholder="Nombre"
-          />
+            placeholder="Nombre" />
 
           <label for="email">Email<span> *</span></label>
           <input
@@ -186,8 +176,7 @@
             type="text"
             id="email"
             required
-            placeholder="Email"
-          />
+            placeholder="Email" />
 
           <label for="message">Mensaje<span> *</span></label>
           <br />
@@ -199,8 +188,7 @@
             id="message"
             cols="80"
             rows="10"
-            placeholder="Mensaje"
-          ></textarea>
+            placeholder="Mensaje"></textarea>
 
           <button class="boton-principal" type="submit">Enviar</button>
         </div>
@@ -209,12 +197,14 @@
     <footer>
       <p>&copy; FragStat.gg - Todos los derechos reservados</p>
     </footer>
-    <script src="js/steamwebapi.js"></script>
+    <!-- Script consumen las APIs -->
+    <script src="./js/steamwebapi.js"></script>
+    <script src="./js/equipos.js"></script>
     <script>
       (function () {
         emailjs.init("API_Key(Public_Key)");
       })();
     </script>
-    <script src="js/form-validation.js"></script>
+    <script src="./js/form-validation.js"></script>
   </body>
 </html>
