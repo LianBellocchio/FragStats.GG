@@ -12,10 +12,6 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat&family=Lato&family=Roboto&display=swap"
       rel="stylesheet" />
-    <!-- los archivos JS -->
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/scrollspy.js"></script>
     <!-- FontAwesome -->
     <script
       src="https://kit.fontawesome.com/c2239edec8.js"
@@ -38,21 +34,15 @@
             </ul>
           </div>
           <div class="search-bar">
-            <form
-              class="search-bar-form"
-              style="display: flex"
-              action="search"
-              method="get">
-              <div class="input-group">
-                <span class="input-group-addon"
-                  ><i class="fa fa-search"></i
-                ></span>
-                <input
-                  type="text"
-                  id="search-bar"
-                  placeholder="Buscar Jugador (SteamID64)" />
-              </div>
-            </form>
+            <div class="input-group">
+              <span class="input-group-addon"
+                ><i id="lupa" class="fa fa-search"></i
+              ></span>
+              <input
+                type="text"
+                id="search-bar"
+                placeholder="Buscar Jugador (SteamID64)" />
+            </div>
           </div>
         </div>
       </nav>
@@ -121,7 +111,7 @@
         <div id="loading" style="display: none">Cargando...</div>
 
         <input type="text" id="steam-id" style="color: black" />
-        <button onclick="getStats()">Obtener estadísticas</button>
+        <button onclick="getStats(`#steam-id`)">Obtener estadísticas</button>
 
         <div id="stats"></div>
 
