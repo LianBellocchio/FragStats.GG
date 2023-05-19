@@ -1,0 +1,159 @@
+/* Estilos para dispositivos mÃ³viles */
+@media (max-width: 767px) {
+    .nav-bar {
+      padding: 0 16px;
+      display: flex;
+      box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);  
+    }
+
+    .nav-tools{
+      position: absolute;
+      background-color: #24292e;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      padding: 30px;
+    }
+
+    .nav-items{
+     flex-direction: column;
+     align-items: end;
+     gap: 2rem; 
+    }
+    
+    .nav-bar li {
+      margin: 0 8px;
+    }
+
+    .abrir-menu,
+    .cerrar-menu{
+      display: block;
+    }
+
+    .search-bar {
+      width: auto; 
+    }
+    
+    .search-bar .input-group {
+      width: 100%;
+    }
+    
+    .home-outer {
+      padding: 16px;
+    }
+    
+    .home-main {
+      padding: 16px;
+    }
+    
+    .home-main h1 {
+      font-size: 24px;
+    }
+    
+    #estadisticas {
+      padding: 16px;
+    }
+    
+    #estadisticas h2 {
+      font-size: 1.8rem;
+    }
+    
+    #estadisticas p {
+      font-size: 1rem;
+      margin-bottom: 24px;
+    }
+    
+    footer p {
+      font-size: 1rem;
+    }
+
+    .formulary .contenedor{
+        max-width: 460px;
+    }
+  }
+  
+  /* Estilos para tablets */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .nav-bar {
+      padding: 0 24px;
+    }
+    
+    .home-outer {
+      padding: 32px;
+    }
+    
+    .home-main {
+      padding: 32px;
+    }
+    
+    .home-main h1 {
+      font-size: 28px;
+    }
+    
+    #estadisticas {
+      padding: 32px;
+    }
+    
+    #estadisticas h2 {
+      font-size: 2rem;
+    }
+    
+    #estadisticas p {
+      font-size: 1.2rem;
+      margin-bottom: 32px;
+    }
+    
+    footer p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Estilos para pantallas de escritorio */
+  @media (min-width: 1024px) {
+    .nav-bar {
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 32px;
+    }
+    
+    .nav-bar li {
+      margin: 0 16px;
+    }
+    
+    .search-bar {
+      width: 35em;
+    }
+    
+    .search-bar .input-group {
+      width: 40rem;
+    }
+    
+    .home-outer {
+      padding: 50px;
+    }
+    
+    .home-main {
+      padding: 86px;
+    }
+    
+    .home-main h1 {
+      font-size: 32px;
+    }
+    
+    #estadisticas {
+      padding: 50px;
+    }
+    
+    #estadisticas h2 {
+      font-size: 2.5rem;
+    }
+    
+    #estadisticas p {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+    }
+    
+    footer p {
+      font-size: 1.2rem;
+    }
+  }

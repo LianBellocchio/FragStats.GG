@@ -32,6 +32,11 @@ header {
   border-radius: 50%;
   display: flex;
 }
+
+.abrir-menu,
+.cerrar-menu{
+  display: none;
+}
 /* Estilo de la Nav Bar*/
 .nav-bar {
   display: flex;

@@ -24,15 +24,8 @@
         <div class="logo">
           <img src="img/icons/MainIcon.png" alt="MainIcon" /><a href="#"></a>
         </div>
+        
         <div class="nav-bar">
-          <div class="nav-tools">
-            <ul>
-              <li><a href="#inicio">Inicio</a></li>
-              <li><a href="#estadisticas">Estadísticas</a></li>
-              <li><a href="#equipos">Equipos</a></li>
-              <li><a href="#contacto">Contacto</a></li>
-            </ul>
-          </div>
           <div class="search-bar">
             <div class="input-group">
               <span class="input-group-addon"
@@ -43,7 +36,18 @@
                 id="search-bar"
                 placeholder="Buscar Jugador (SteamID64)" />
             </div>
+            <button id="abrir" class="abrir-menu">Abrir</button>
           </div>
+          <div id="nav" class="nav-tools">
+            <ul class="nav-items">
+              <button id="cerrar" class="cerrar-menu">Cerrar</button>
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#estadisticas">Estadísticas</a></li>
+              <li><a href="#equipos">Equipos</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+          
         </div>
       </nav>
     </header>
@@ -196,5 +200,6 @@
       })();
     </script>
     <script src="./js/form-validation.js"></script>
+    <script src="./js/responsive.js"></script>
   </body>
 </html>
