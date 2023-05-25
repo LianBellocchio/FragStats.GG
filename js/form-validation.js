@@ -53,7 +53,8 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
   if (errorName.textContent === "") {
     // Envía el email usando EmailJS
     emailjs
-      .send("service_ID", "template_ID", {
+      .send("service_05wovzm", "template_bzilkgo", {
+        //service_ID y template_ID
         from_name: name,
         from_email: email,
         message_html: message,
