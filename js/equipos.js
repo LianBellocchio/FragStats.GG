@@ -15,11 +15,11 @@ async function mostrarRanking() {
 async function obtenerDatos() {
   try {
     const apiKey = "a1833a7be9fa4e6db2b543e6a4f7759f";
-    const url = `https://api.sportsdata.io/v3/csgo/scores/json/Competitions?key=${apiKey}`;
+    const url = `https://api.sportsdata.io/v3/csgo/scores/json/teams?key=${apiKey}`;
     const respuesta = await fetch(url);
     if (!respuesta.ok) {
       throw new Error(
-        `No se pudo obtener los datos de competiciones: ${respuesta.status}`
+        `No se pudo obtener los datos de los equipos: ${respuesta.status}`
       );
     }
     const datos = await respuesta.json();
