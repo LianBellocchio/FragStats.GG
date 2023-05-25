@@ -34,7 +34,7 @@ header {
 }
 
 .abrir-menu,
-.cerrar-menu{
+.cerrar-menu {
   display: none;
 }
 /* Estilo de la Nav Bar*/
@@ -140,9 +140,8 @@ header {
 /* Estilos para la sección de presentación */
 
 .home-outer {
-  background: url("/images/cs-background.png") no-repeat center center fixed;
+  background: url(../img/banners/M4a4howl.jpg) no-repeat center center fixed;
   background-size: cover;
-  background-image: url(../img/banners/m4a4howl.jpg);
   height: 100vh;
   display: flex;
   align-items: center;
