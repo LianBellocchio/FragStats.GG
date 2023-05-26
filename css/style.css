@@ -17,6 +17,8 @@ body {
   font-weight: 300;
   display: flex;
   flex-direction: row;
+
+  transition: ease-in;
 }
 
 header {
@@ -216,6 +218,56 @@ header {
   text-align: center;
 }
 
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.stat-item {
+  text-align: center;
+  flex: 0 0 200px;
+}
+
+.stat-label {
+  font-weight: bold;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ff9900;
+  transform-origin: 0 50%;
+  transform: rotate(0deg);
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+.progress-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff9900;
+}
+
 .circular-progress {
   position: relative;
   height: 250px;
@@ -236,34 +288,13 @@ header {
   background-color: #fff;
 }
 
-.progress {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #ff9900;
-  transform-origin: 0 50%;
-  transform: rotate(0deg);
+.avatar-image {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  transition: transform 0.5s ease;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
-
-.stat-item {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.stat-label {
-  font-weight: bold;
-}
-
-.progress-value {
-  font-size: 20px;
-  font-weight: bold;
-  color: #ff9900;
-}
-
 
 /* Estilos para equipos */
 
