@@ -17,7 +17,9 @@
       src="https://kit.fontawesome.com/c2239edec8.js"
       crossorigin="anonymous"></script>
     <!-- emailjs -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   </head>
 
   <body>
@@ -38,11 +40,17 @@
                 id="search-bar"
                 placeholder="Buscar Jugador (SteamID64)" />
             </div>
-            <button id="abrir" class="abrir-menu">Abrir</button>
+            <i
+              id="abrir"
+              class="fa-solid fa-bars fa-xl"
+              style="color: #dd9e37"></i>
           </div>
           <div id="nav" class="nav-tools">
             <ul class="nav-items">
-              <button id="cerrar" class="cerrar-menu">Cerrar</button>
+              <i
+                id="cerrar"
+                class="fa-solid fa-bars fa-xl"
+                style="color: #dd9e37"></i>
               <li><a href="#inicio">Inicio</a></li>
               <li><a href="#estadisticas">Estadísticas</a></li>
               <li><a href="#equipos">Equipos</a></li>
@@ -108,14 +116,16 @@
       </section>
       <section id="estadisticas">
         <h2>Estadísticas</h2>
-        <p>Encuentra aquí las estadísticas más importantes de los mejores jugadores y equipos de CS:GO.</p>
+        <p>
+          Encuentra aquí las estadísticas más importantes de los mejores
+          jugadores y equipos de CS:GO.
+        </p>
         <div id="loading" style="display: none">Cargando...</div>
         <input type="text" id="steam-id" style="color: black" />
         <button onclick="getStats('#steam-id')">Obtener estadísticas</button>
         <div class="stats-container" id="stats"></div>
       </section>
-      
-      
+
       <section id="equipos">
         <div id="title_equipos">
           <img id="podio" src="./img/icons/podium.png" alt="" />
@@ -153,19 +163,36 @@
         <div class="contenedor">
           <form id="myForm" method="POST">
             <label for="name">Nombre<span> *</span></label>
-            <input name="name" required="" type="text" id="name" placeholder="Nombre">
+            <input
+              name="name"
+              required=""
+              type="text"
+              id="name"
+              placeholder="Nombre" />
             <p id="errorName"></p>
             <label for="email">Email<span> *</span></label>
-            <input name="email" type="text" id="email" required="" placeholder="Email">
+            <input
+              name="email"
+              type="text"
+              id="email"
+              required=""
+              placeholder="Email" />
             <p id="errorEmail"></p>
             <label for="message">Mensaje<span> *</span></label>
-            <textarea name="message" id="message" cols="80" rows="10" placeholder="Mensaje" data-dl-input-translation="true"></textarea>
+            <textarea
+              name="message"
+              id="message"
+              cols="80"
+              rows="10"
+              placeholder="Mensaje"
+              data-dl-input-translation="true"></textarea>
 
             <button class="boton-principal" type="submit">Enviar</button>
-          <deepl-inline-translate style="z-index: 1999999999;"></deepl-inline-translate></form>
+            <deepl-inline-translate
+              style="z-index: 1999999999"></deepl-inline-translate>
+          </form>
         </div>
       </section>
-      
     </main>
     <footer>
       <p>&copy; FragStat.gg - Todos los derechos reservados</p>

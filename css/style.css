@@ -35,9 +35,8 @@ header {
   display: flex;
 }
 
-.abrir-menu,
-.cerrar-menu {
-  display: none;
+.fa-solid {
+  display: none !important;
 }
 /* Estilo de la Nav Bar*/
 .nav-bar {

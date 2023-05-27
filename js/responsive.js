@@ -14,9 +14,9 @@ function cerrarMenuHamburguesa() {
 }
 
 // Función para mantener el nav visible
-function minWidth(){
-  if (query.matches){
-    document.querySelector('nav').style.display = "block";
+function minWidth() {
+  if (query.matches) {
+    document.querySelector("nav").style.display = "block";
   }
 }
 // Asignar eventos a los botones
@@ -24,13 +24,14 @@ abrirMenu.addEventListener("click", abrirMenuHamburguesa);
 cerrarMenu.addEventListener("click", cerrarMenuHamburguesa);
 
 // Mantener la nav-bar visible
-const navbar = document.querySelector('#nav');
+const navbar = document.querySelector("#nav");
 
 function setNavbarDisplay() {
-  if (window.innerWidth < 768) { // Navbar debería estar escondida en tamaños más chicos
-    navbar.style.display = 'none';
+  if (window.innerWidth < 768) {
+    // Navbar debería estar escondida en tamaños más chicos
+    navbar.style.display = "none";
   } else {
-    navbar.style.display = 'block';
+    navbar.style.display = "block";
   }
 }
 
@@ -38,6 +39,4 @@ function setNavbarDisplay() {
 setNavbarDisplay();
 
 // Event listener al cambiar el tamaño de pantalla
-window.addEventListener('resize', setNavbarDisplay);
-
-
+window.addEventListener("resize", setNavbarDisplay);
