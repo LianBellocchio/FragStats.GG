@@ -10,11 +10,12 @@ Obtener información de los perfiles de los jugadores, incluyendo nombre, imagen
 Ver información de la partida en vivo, incluyendo los perfiles de los jugadores, su elo en Matchmaking, Faceit, ESEA y Gamersclub.
 
 **Tecnologías utilizadas:**
--HTML5
--CSS3
--JavaScript
--jQuery
--Steam Web API
+
+- HTML5
+- CSS3
+- JavaScript
+- jQuery
+- Steam Web API
 
 **Cómo utilizar FragStat.net:**
 Ir a la página web de FragStat.net
