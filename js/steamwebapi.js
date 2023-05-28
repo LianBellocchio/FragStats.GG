@@ -3,6 +3,8 @@ function getStats(input) {
   const apiKey = "ae941d3c-598a-4fde-9b58-766e999f9c72"; /* Tracker.gg apikey */
   const url = `https://cors-anywhere.herokuapp.com/https://public-api.tracker.gg/v2/csgo/standard/profile/steam/${steamId}?TRN-Api-Key=${apiKey}`;
 
+  console.log(steamId);
+
   fetch(url, { mode: "cors" })
     .then((response) => {
       if (response.ok) {
@@ -86,16 +88,16 @@ function getStats(input) {
     });
 }
 
-const input = document.querySelector("#steam-id");
+const input = document.querySelector("#search-bar");
 const estadisticas = document.getElementById("estadisticas");
 
 input.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
-    getStats("#steam-id");
+    getStats("#search-bar");
     setTimeout(function () {
       estadisticas.scrollIntoView({ behavior: "smooth" });
-    }, 100);
+    }, 1000);
   }
 });
 
