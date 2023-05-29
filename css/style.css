@@ -111,6 +111,11 @@ header {
   height: 38px;
 }
 
+input#search-bar:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px rgb(60, 63, 70) inset;
+  -webkit-text-fill-color: #fff;
+}
+
 .search-bar input[type="text"] {
   flex: 1;
   height: 100%;
