@@ -40,3 +40,20 @@ setNavbarDisplay();
 
 // Event listener al cambiar el tamaño de pantalla
 window.addEventListener("resize", setNavbarDisplay);
+
+// Cambiar placeholder de searchbar en media <= 480
+function cambiarPlaceholder() {
+  let input = document.getElementById("search-bar");
+  input.placeholder = "Buscar Jugador";
+}
+var mediaQuery = window.matchMedia("(max-width: 480px)");
+// Ejecutar la función inicialmente si la media query se cumple
+if (mediaQuery.matches) {
+  cambiarPlaceholder();
+}
+// Agregar el listener del cambio de media query
+mediaQuery.addEventListener("change", function (event) {
+  if (event.matches) {
+    cambiarPlaceholder();
+  }
+});

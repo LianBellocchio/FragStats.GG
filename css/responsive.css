@@ -3,6 +3,12 @@
   .nav-bar {
     width: 70% !important;
   }
+
+  .search-bar {
+    width: 70% !important;
+    margin-left: 34px !important;
+  }
+
   .search-bar .input-group {
     margin-right: 15px !important;
   }
@@ -16,6 +22,10 @@
   .home-outer {
     height: 90vh !important;
     padding: 0 !important;
+  }
+
+  .home-outer .boton-principal {
+    width: auto !important;
   }
 
   #home-intro {
