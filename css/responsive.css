@@ -1,8 +1,40 @@
-/* Estilos para dispositivos mÃ³viles */
+/* Estilos para dispositivos móviles */
 @media (max-width: 480px) {
+  .nav-bar {
+    width: 70% !important;
+  }
+  .search-bar .input-group {
+    margin-right: 15px !important;
+  }
+
+  .logo {
+    height: 80px !important;
+    margin-right: 0px !important;
+    padding-left: 0px !important;
+  }
+
+  .home-outer {
+    height: 90vh !important;
+    padding: 0 !important;
+  }
+
+  #home-intro {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    text-align: -webkit-center;
+  }
+
+  .formulary input,
+  .formulary textarea {
+    width: 95%;
+  }
+
+  .button-container {
+    text-align: center;
+  }
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .logo {
     margin-right: 40px;
   }
