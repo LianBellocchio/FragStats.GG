@@ -248,6 +248,9 @@ input#search-bar:-webkit-autofill {
   height: 50px;
   text-align: center;
   border-radius: 5px;
+  border-color: #dd9e37;
+  border: 2px;
+  box-shadow: 0 0 0 1px #dd9e37;
   background-color: #dd9e37;
   font-size: 14px;
   font-weight: bold;
