@@ -3,9 +3,7 @@ createApp({
   data() {
     return {
       cuentas: [],
-      //url:'http://localhost:5000/cuentas',
-      // si el backend esta corriendo local  usar localhost 5000(si no lo subieron a pythonanywhere)
-      url: "http://plasmads.pythonanywhere.com/cuentas", // si ya lo subieron a pythonanywhere
+      url: "http://plasmads.pythonanywhere.com/cuentas",
       error: false,
       cargando: true,
       /*atributos para el guardar los valores del formulario */
@@ -59,7 +57,7 @@ createApp({
         })
         .catch((err) => {
           console.error(err);
-          alert("Error al Grabar"); // puedo mostrar el error tambien
+          alert("Error al Grabar");
         });
     },
   },

@@ -1,6 +1,6 @@
 console.log(location.search); // lee los argumentos pasados a este formulario
 var id = location.search.substr(4); // cuenta_update.html?id=1
-console.log(id);
+
 const { createApp } = Vue;
 createApp({
   data() {
@@ -9,6 +9,7 @@ createApp({
       nombre: "",
       correo: "",
       contrasena: "",
+      favoritos: "",
       url: "http://plasmads.pythonanywhere.com/cuentas/" + id,
     };
   },
@@ -22,6 +23,7 @@ createApp({
           this.nombre = data.nombre;
           this.correo = data.correo;
           this.contrasena = data.contrasena;
+          this.favoritos = data.favoritos;
         })
         .catch((err) => {
           console.error(err);
@@ -33,6 +35,7 @@ createApp({
         nombre: this.nombre,
         correo: this.correo,
         contrasena: this.contrasena,
+        favoritos: this.favoritos,
       };
       var options = {
         body: JSON.stringify(cuenta),

@@ -1,4 +1,4 @@
-var usuario = "";
+var ID = "";
 
 function iniciarSesion(correoBuscado, contrasenaIngresada) {
   fetch("http://plasmads.pythonanywhere.com/cuentas")
@@ -10,8 +10,8 @@ function iniciarSesion(correoBuscado, contrasenaIngresada) {
 
       if (objetoEncontrado) {
         if (objetoEncontrado.contrasena === contrasenaIngresada) {
+          ID = objetoEncontrado.id;
           alert("Inicio de sesión correcto");
-          return (usuario = correoBuscado);
         } else {
           alert("Contraseña incorrecta");
         }
