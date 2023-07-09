@@ -55,15 +55,15 @@
           <h2>Registrarte</h2>
           <div class="mb-3">
             <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre" v-model="nombre" />
+            <input type="text" name="nombre" id="nombre" v-model="nombre"/>
           </div>
           <div class="mb-3">
             <label for="correo">Correo</label>
-            <input type="text" name="correo" id="correo" v-model="correo" />
+            <input type="text" name="correo" id="correo" v-model="correo"/>
           </div>
           <div class="mb-3">
             <label for="contrasena">Contraseña</label>
-            <input type="password" name="contrasena" id="contrasena" v-model="contrasena" />
+            <input type="password" name="contrasena" id="contrasena" v-model="contrasena"/>
           </div>
             <button type="button" v-on:click="grabar()">Registrarte</button>
           </div>
@@ -72,25 +72,27 @@
 
     </div>
 
-    <!-- Modal de inicio de sesión -->
-    <div id="login-modal" class="modal">
-      <div class="modal-content">
-        <form>
-        <span class="close" onclick="closeModal('login-modal')">&times;</span>
-        <div class="modal-login-container">
-          <h2>Iniciar sesión</h2>
-          <div class="mb-3">
-            <label for="correo-login">Correo</label>
-            <input type="text" name="correo-login" id="correo-login" />
-          </div>
-          <div class="mb-3">
-            <label for="contrasena-login">Contraseña</label>
-            <input type="password" name="contrasena-login" id="contrasena-login" />
-          </div>
-          <button type="button" id="botonIniciarSesion">Iniciar sesión</button>
+<!-- Modal de inicio de sesión -->
+<div id="login-modal" class="modal">
+  <div class="modal-content">
+    <form @submit="iniciarSesion">
+      <span class="close" @click="closeModal('login-modal')">&times;</span>
+      <div class="modal-login-container">
+        <h2>Iniciar sesión</h2>
+        <div class="mb-3">
+          <label for="correo-login">Correo</label>
+          <input type="text" v-model="correo" name="correo-login" id="correo-login" />
         </div>
-      </form>
+        <div class="mb-3">
+          <label for="contrasena-login">Contraseña</label>
+          <input type="password" v-model="contrasena" name="contrasena-login" id="contrasena-login" />
+        </div>
+        <button type="submit">Iniciar sesión</button>
       </div>
+    </form>
+  </div>
+</div>
+
     </div>
     <main>
       <section
