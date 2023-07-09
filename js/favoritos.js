@@ -5,14 +5,14 @@ function eliminar(favorito) {
     favoritos = favoritos.replace(favorito + ",", "");
   } else if (favoritos.indexOf("," + favorito) !== -1) {
     favoritos = favoritos.replace("," + favorito, "");
-  } else {
-    favoritos = favoritos.replace(favorito, "");
+  } else if (favoritos === favorito) { // Agrega esta condición
+    favoritos = "";
   }
 }
 
 function agregar(favorito) {
   if (favoritos.indexOf(favorito) !== -1) {
-    eliminar(favoritos, favorito);
+    eliminar(favorito);
   } else {
     if (favoritos === "") {
       favoritos = favorito;
