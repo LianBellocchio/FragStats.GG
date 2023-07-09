@@ -70,3 +70,10 @@ function obtenerFavoritos() {
   const arrayFavoritos = favoritos.split(",");
   return arrayFavoritos;
 }
+
+document
+  .getElementById("guardarFavorito")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    agregar(document.getElementById("favorito").value);
+  });
