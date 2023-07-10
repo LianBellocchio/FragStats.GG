@@ -53,6 +53,9 @@ new Vue({
       };
       fetch(this.url, options)
         .then(function () {
+          document.querySelector(".registrado").style.display = "none";
+          document.querySelector(".iniciado").style.display = "none";
+          closeModal("register-modal");
           alert("Registro grabado");
         })
         .catch((err) => {

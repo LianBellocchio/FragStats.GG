@@ -17,6 +17,9 @@ new Vue({
           if (objetoEncontrado) {
             if (objetoEncontrado.contrasena === this.contrasena) {
               localStorage.setItem("id", `${objetoEncontrado.id}`);
+              document.querySelector(".registrado").style.display = "none";
+              document.querySelector(".iniciado").style.display = "none";
+              closeModal("login-modal");
               alert("Inicio de sesión correcto");
             } else {
               alert("Contraseña incorrecta");
