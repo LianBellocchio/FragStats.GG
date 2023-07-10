@@ -75,7 +75,7 @@
 <div id="login-modal" class="modal">
   <div class="modal-content">
     <form @submit="iniciarSesion">
-      <span class="close" @click="closeModal('login-modal')">&times;</span>
+      <span class="close" onclick="closeModal('login-modal')">&times;</span>
       <div class="modal-login-container">
         <h2>Iniciar sesión</h2>
         <div class="mb-3">
@@ -86,7 +86,7 @@
           <label for="contrasena-login">Contraseña</label>
           <input type="password" v-model="contrasena" name="contrasena-login" id="contrasena-login" />
         </div>
-        <button type="submit">Iniciar sesión</button>
+        <button type="button" v-on:click="iniciarSesion()">Iniciar sesión</button>
       </div>
     </form>
   </div>
@@ -257,6 +257,7 @@
     <script src="./js/responsive.js"></script>
   <!-- <script src="./js/main.js"></script> -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
   <script src="./js/crear_cuenta.js"></script>
   <script src="./js/iniciar_sesion.js"></script>
   </body>

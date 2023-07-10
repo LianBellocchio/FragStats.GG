@@ -13,7 +13,7 @@ new Vue({
           const objetoEncontrado = data.find(
             (objeto) => objeto.correo === this.correo
           );
-
+          console.log("1");
           if (objetoEncontrado) {
             if (objetoEncontrado.contrasena === this.contrasena) {
               localStorage.setItem("id", `${objetoEncontrado.id}`);
