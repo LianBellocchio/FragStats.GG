@@ -1,5 +1,5 @@
 var favoritos = "";
-var ID = "1";
+var ID = localStorage.getItem("id");
 
 function traerFavoritos() {
   return fetch(`http://plasmads.pythonanywhere.com/cuentas/${ID}`)
@@ -29,10 +29,10 @@ function eliminar(favorito) {
 
 function agregar(favorito) {
   traerFavoritos().then(() => {
-    if (favoritos.indexOf(favorito) !== -1) {
+    if (favoritos !== null && favoritos.indexOf(favorito) !== -1) {
       eliminar(favorito);
     } else {
-      if (favoritos === "") {
+      if (favoritos === "" || favoritos === null) {
         favoritos = favorito;
       } else {
         favoritos += "," + favorito;
@@ -43,7 +43,7 @@ function agregar(favorito) {
 }
 
 function modificarFavoritos(id, favoritosModificados) {
-  var url = `http://plasmads.pythonanywhere.com/cuentas/${id}`;
+  var url = `http://plasmads.pythonanywhere.com/cuentas/${ID}`;
 
   traerFavoritos().then(() => {
     var datosModificados = {
