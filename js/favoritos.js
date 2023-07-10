@@ -2,10 +2,14 @@ var favoritos = "";
 var ID = "1";
 
 function traerFavoritos() {
-  fetch(`http://plasmads.pythonanywhere.com/cuentas/${ID}`)
+  return fetch(`http://plasmads.pythonanywhere.com/cuentas/${ID}`)
     .then((response) => response.json())
     .then((data) => {
-      favoritos = data.favoritos;
+      this.id = data.id;
+      this.nombre = data.nombre;
+      this.correo = data.correo;
+      this.contrasena = data.contrasena;
+      this.favoritos = data.favoritos;
     })
     .catch((error) => {
       console.error("Error al realizar la solicitud:", error);
@@ -17,54 +21,60 @@ function eliminar(favorito) {
     favoritos = favoritos.replace(favorito + ",", "");
   } else if (favoritos.indexOf("," + favorito) !== -1) {
     favoritos = favoritos.replace("," + favorito, "");
-  } else if (favoritos === favorito) {
-    // Agrega esta condición
-    favoritos = "";
+  } else {
+    favoritos = favoritos.replace(favorito, "");
   }
-  modificarFavoritos(favoritos);
+  modificarFavoritos(1, favoritos);
 }
 
 function agregar(favorito) {
-  if (favoritos.indexOf(favorito) !== -1) {
-    eliminar(favorito);
-  } else {
-    if (favoritos === "") {
-      favoritos = favorito;
+  traerFavoritos().then(() => {
+    if (favoritos.indexOf(favorito) !== -1) {
+      eliminar(favorito);
     } else {
-      favoritos += "," + favorito;
+      if (favoritos === "") {
+        favoritos = favorito;
+      } else {
+        favoritos += "," + favorito;
+      }
+      modificarFavoritos(1, favoritos);
     }
-  }
-  modificarFavoritos(favoritos);
+  });
 }
 
-//Aca agregar metodo PUT
+function modificarFavoritos(id, favoritosModificados) {
+  var url = `http://plasmads.pythonanywhere.com/cuentas/${id}`;
 
-// Este no anda
-// function modificarFavoritos(favoritosModificados) {
-//   var datosModificados = {
-//     favoritos: favoritosModificados,
-//   };
+  traerFavoritos().then(() => {
+    var datosModificados = {
+      contrasena: contrasena,
+      correo: correo,
+      id: id,
+      nombre: nombre,
+      favoritos: favoritosModificados,
+    };
 
-//   var options = {
-//     method: "PUT",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(datosModificados),
-//   };
+    var options = {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(datosModificados),
+    };
 
-//   fetch(`http://plasmads.pythonanywhere.com/cuentas/${ID}`, options)
-//     .then(function (response) {
-//       if (response.ok) {
-//         console.log("Datos modificados exitosamente");
-//       } else {
-//         throw new Error("Error al modificar los datos");
-//       }
-//     })
-//     .catch(function (error) {
-//       console.error("Error al modificar los datos:", error);
-//     });
-// }
+    fetch(url, options)
+      .then((response) => {
+        if (response.ok) {
+          console.log("Datos modificados exitosamente");
+        } else {
+          throw new Error("Error al modificar los datos");
+        }
+      })
+      .catch((error) => {
+        console.error("Error al modificar los datos:", error);
+      });
+  });
+}
 
 function obtenerFavoritos() {
   const arrayFavoritos = favoritos.split(",");
