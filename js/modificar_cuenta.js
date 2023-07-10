@@ -1,11 +1,11 @@
 console.log(location.search); // lee los argumentos pasados a este formulario
-var id = location.search.substr(4); // cuenta_update.html?id=1
+var id = localStorage.getItem("id"); // cuenta_update.html?id=1
 
 const { createApp } = Vue;
 createApp({
   data() {
     return {
-      id: 1,
+      id: localStorage.getItem("id"),
       nombre: "",
       correo: "",
       contrasena: "",
@@ -43,6 +43,7 @@ createApp({
         headers: { "Content-Type": "application/json" },
         redirect: "follow",
       };
+
       fetch(this.url, options)
         .then(function () {
           alert("Registro modificado");
@@ -52,6 +53,18 @@ createApp({
         .catch((err) => {
           console.error(err);
           alert("Error al Modificar");
+        });
+    },
+    eliminar() {
+      const url = this.url;
+      var options = {
+        method: "DELETE",
+      };
+      fetch(url, options)
+        .then((res) => res.text()) // or res.json()
+        .then((res) => {
+          alert("Registro Eliminado");
+          location.reload(); // recarga el json luego de eliminado el registro
         });
     },
   },
