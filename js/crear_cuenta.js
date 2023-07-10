@@ -55,6 +55,7 @@ new Vue({
         .then(function () {
           document.querySelector(".registrado").style.display = "none";
           document.querySelector(".iniciado").style.display = "none";
+          document.querySelector("#cerrarSesion").style.display = "inline";
           closeModal("register-modal");
           alert("Registro grabado");
         })
