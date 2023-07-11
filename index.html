@@ -158,7 +158,7 @@
 
         <input class="input-stats" type="text" id="steam-id" placeholder="Buscar Jugador (SteamID64)" />
 
-        <button class="button-stats" onclick="getStats('#steam-id')">Obtener estadísticas</button>
+        <button class="button-stats" onclick="getStats(document.getElementById('steam-id').value)">Obtener estadísticas</button>
         <div class="stats-container" id="stats"></div>
       </section>
 
