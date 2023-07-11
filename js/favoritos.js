@@ -47,6 +47,9 @@ document.getElementById("search-bar").addEventListener("keydown", function (even
       agregar(searchTerm);
       event.target.value = "";
     }
+    setTimeout(function () {
+      estadisticas.scrollIntoView({ behavior: "smooth" });
+    }, 1000);
   }
 });
 

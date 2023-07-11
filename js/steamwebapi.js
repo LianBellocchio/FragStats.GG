@@ -88,15 +88,6 @@ function getStats(input) {
 const input = document.querySelector("#search-bar");
 const estadisticas = document.getElementById("estadisticas");
 
-input.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    getStats("#search-bar");
-    setTimeout(function () {
-      estadisticas.scrollIntoView({ behavior: "smooth" });
-    }, 1000);
-  }
-});
 
 const lupa = document.querySelector("#lupa");
 lupa.addEventListener("click", () => {
