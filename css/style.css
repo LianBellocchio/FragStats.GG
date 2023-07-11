@@ -51,6 +51,8 @@ header {
   display: flex;
   margin: 0;
   padding: 0;
+  justify-content: start;
+  align-items: start;
 }
 
 .nav-bar li {
@@ -99,6 +101,7 @@ header {
   display: flex;
   justify-content: center;
   width: 35em;
+  align-items: center;
 }
 
 .search-bar .input-group {
@@ -138,6 +141,29 @@ input#search-bar:-webkit-autofill {
 
 .search-bar .input-group-addon:hover {
   color: #ccc;
+}
+
+.fa-svg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8em;
+  height: 1.8em;
+}
+
+.fa-svg svg {
+  width: 100%;
+  height: 100%;
+  fill: #dd9e37;
+  transition: transform 0.7s ease;
+}
+
+.fa-svg.open svg {
+  transform: rotate(360deg);
+}
+
+.fa-svg.close svg {
+  transform: rotate(-360deg);
 }
 
 /* Estilos para el modal */
@@ -484,8 +510,8 @@ input#input-stats:-webkit-autofill {
   height: 100%;
   width: 100%;
   background-color: #ff9900;
-  transform-origin: 0 50%;
-  transform: rotate(0deg);
+  transform-origin: 50% 100%; /* Actualizado */
+  transform: rotate(0.1turn); /* Actualizado */
   border-radius: 50%;
   transition: transform 0.5s ease;
 }

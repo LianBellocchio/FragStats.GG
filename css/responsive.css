@@ -80,7 +80,6 @@
 
   .fa-solid {
     display: block !important;
-    margin-top: 18px;
   }
 
   .search-bar {
@@ -89,7 +88,6 @@
 
   .search-bar .input-group {
     width: 100%;
-    margin-right: 50px;
   }
 
   .home-outer {
