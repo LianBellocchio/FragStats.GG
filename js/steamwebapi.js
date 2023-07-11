@@ -100,7 +100,7 @@ input.addEventListener("keypress", function (event) {
 
 const lupa = document.querySelector("#lupa");
 lupa.addEventListener("click", () => {
-  getStats("#steam-id");
+  getStats("#search-bar");
   setTimeout(function () {
     estadisticas.scrollIntoView({ behavior: "smooth" });
   }, 100);
