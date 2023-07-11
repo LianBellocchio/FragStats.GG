@@ -41,6 +41,7 @@ document.getElementById("search-bar").addEventListener("blur", function () {
 
 document.getElementById("search-bar").addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
+    getStats("#search-bar");
     var searchTerm = event.target.value.trim();
     if (searchTerm !== "") {
       agregar(searchTerm);

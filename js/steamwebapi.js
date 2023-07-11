@@ -41,7 +41,6 @@ function getStats(input) {
         // Crear el elemento de la barra de progreso
         const progress = document.createElement("div");
         progress.className = "progress";
-        progress.style.transform = `rotate(0deg)`;
 
         // Crear el elemento del valor de progreso
         const progressValue = document.createElement("span");
