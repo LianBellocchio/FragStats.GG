@@ -155,8 +155,10 @@
           jugadores y equipos de CS:GO.
         </p>
         <div id="loading" style="display: none">Cargando...</div>
-        <input type="text" id="steam-id" style="color: black" />
-        <button onclick="getStats('#steam-id')">Obtener estadísticas</button>
+
+        <input class="input-stats" type="text" id="steam-id" placeholder="Buscar Jugador (SteamID64)" />
+
+        <button class="button-stats" onclick="getStats('#steam-id')">Obtener estadísticas</button>
         <div class="stats-container" id="stats"></div>
       </section>
 

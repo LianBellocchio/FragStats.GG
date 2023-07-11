@@ -402,6 +402,54 @@ input#search-bar:-webkit-autofill {
   text-align: center;
 }
 
+.input-stats{
+  background-color: rgb(60, 63, 70);
+  border-radius: 4px;
+  width: 40rem;
+  height: 38px;
+  padding: 0 10px;
+  color: #fff;
+}
+
+input#input-stats:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px rgb(60, 63, 70) inset;
+  -webkit-text-fill-color: #fff;
+}
+
+.input-stats input[type="text"] {
+  flex: 1;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+.input-stats input[type="text"]:focus {
+  outline: none;
+}
+
+.button-stats {
+  padding: 1rem 1rem;
+  width: 200px;
+  background-color: #dd9e37;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 2rem;
+  margin-bottom: 10px;
+  transition: all 0.4s ease;
+}
+
+.button-stats:hover {
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
 .stats-container {
   display: flex;
   flex-wrap: wrap;
