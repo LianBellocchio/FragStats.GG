@@ -12,6 +12,7 @@
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous" />
+      <link rel="stylesheet" href="/FragStats.GG/css/style.css">
   </head>
   <body>
     <header id="header">
@@ -19,48 +20,48 @@
     </header>
     <main>
       <div class="container" id="app">
-        <form
-          style="
-            background-color: aliceblue;
-            margin: 10px auto;
-            width: 400px;
-            padding: 20px;
-          ">
+        <form id="wrapper">
           <h2>Modificar Cuenta</h2>
           <div class="mb-3">
             <label for="id">Id</label>
-            <input type="number" name="id" id="id" disabled v-model="id" />
+            <br>
+            <input type="number" name="id" id="id" placeholder="" disabled v-model="id" />
           </div>
           <div class="mb-3">
             <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre" v-model="nombre" />
+            <br>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre" v-model="nombre" />
           </div>
           <div class="mb-3">
             <label for="correo">Correo</label>
-            <input type="text" name="correo" id="correo" v-model="correo" />
+            <br>
+            <input type="text" name="correo" id="correo" placeholder="Correo" v-model="correo" />
           </div>
           <div class="mb-3">
             <label for="contrasena">Contraseña</label>
+            <br>
             <input
               type="text"
               name="contrasena"
               id="contrasena"
               v-model="contrasena" />
           </div>
-          <button
+           <button
+            id="btn-modify"
             type="button"
             class="btn btn-success"
             v-on:click="modificar()">
             Grabar
           </button>
-          <button type="button" class="btn btn-success" v-on:click="eliminar()">
+          <br>
+          <button id="btn-modify" type="button" class="btn btn-success" v-on:click="eliminar()">
             Eliminar
           </button>
         </form>
       </div>
     </main>
     <footer>
-      <!-- place footer here -->
+      <h3>Todos los derechos reservados</h3>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script

@@ -265,6 +265,63 @@ input#search-bar:-webkit-autofill {
   text-decoration: none;
 }
 
+/*Estilos para modificar cuentas*/
+
+.container{
+  background: url(../img/banners/M4a4howl.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 103vh;
+  min-width: 100%;
+  color: #ededed;
+  margin: -10px auto;
+  font-size:medium; 
+  padding: 10px;
+}
+
+.container #id, #nombre, #correo, #contrasena{
+  border-radius: 20px;
+  background-color: #e8e6eb;
+  color: #000000;
+  padding: 4px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  border-style: outset;
+  border-color: #dd9e37;
+}
+
+#wrapper{
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 420px;
+  border-radius: 15px;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container h2{
+  font-size: 1.65rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+#btn-modify{
+  font-size:large;
+  padding: 5px;
+  margin-top: 15px;
+  border-radius: 20px;
+  background-color: #dd9e37;
+  width: 205px;
+  font-size: medium;
+  border-style: outset;
+  border-color: #dd9e37;
+}
+
+
+
 /* Estilos para la sección de presentación */
 
 .home-outer {
