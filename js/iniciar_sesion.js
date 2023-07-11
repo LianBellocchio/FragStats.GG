@@ -15,7 +15,7 @@ new Vue({
           );
           if (objetoEncontrado) {
             if (objetoEncontrado.contrasena === this.contrasena) {
-              localStorage.setItem("id", `${objetoEncontrado.id}`);
+              localStorage.setItem("id", objetoEncontrado.id);
               document.querySelector(".registrado").style.display = "none";
               document.querySelector(".iniciado").style.display = "none";
               document.querySelector("#miCuenta").style.display = "inline";

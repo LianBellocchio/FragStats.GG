@@ -52,16 +52,19 @@ new Vue({
         redirect: "follow",
       };
       fetch(this.url, options)
-        .then(function () {
+        .then((response) => response.json())
+        .then((data) => {
           document.querySelector(".registrado").style.display = "none";
           document.querySelector(".iniciado").style.display = "none";
+          document.querySelector("#miCuenta").style.display = "inline";
           document.querySelector("#cerrarSesion").style.display = "inline";
+          localStorage.setItem("id", data.id);
           closeModal("register-modal");
           alert("Registro grabado");
         })
         .catch((err) => {
           console.error(err);
-          alert("Error al Grabar"); // puedo mostrar el error tambien
+          alert("Error al Grabar"); // puedes mostrar el error también
         });
     },
   },
