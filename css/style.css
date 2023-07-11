@@ -140,6 +140,15 @@ input#search-bar:-webkit-autofill {
   color: #ccc;
 }
 
+div#recent-searches {
+  position: fixed;
+  top: 60px;
+  width: 34%;
+  text-align: initial;
+  list-style-type: none;
+  background: rgb(60, 63, 70);
+}
+
 /* Estilos para el modal */
 .modal {
   display: none;
@@ -267,7 +276,7 @@ input#search-bar:-webkit-autofill {
 
 /*Estilos para modificar cuentas*/
 
-.container{
+.container {
   background: url(../img/banners/M4a4howl.jpg);
   display: flex;
   justify-content: center;
@@ -276,11 +285,14 @@ input#search-bar:-webkit-autofill {
   min-width: 100%;
   color: #ededed;
   margin: -10px auto;
-  font-size:medium; 
+  font-size: medium;
   padding: 10px;
 }
 
-.container #id, #nombre, #correo, #contrasena{
+.container #id,
+#nombre,
+#correo,
+#contrasena {
   border-radius: 20px;
   background-color: #e8e6eb;
   color: #000000;
@@ -291,7 +303,7 @@ input#search-bar:-webkit-autofill {
   border-color: #dd9e37;
 }
 
-#wrapper{
+#wrapper {
   border: 2px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -303,13 +315,13 @@ input#search-bar:-webkit-autofill {
   align-items: center;
 }
 
-.container h2{
+.container h2 {
   font-size: 1.65rem;
   font-family: "Open Sans", sans-serif;
 }
 
-#btn-modify{
-  font-size:large;
+#btn-modify {
+  font-size: large;
   padding: 5px;
   margin-top: 15px;
   border-radius: 20px;
@@ -319,8 +331,6 @@ input#search-bar:-webkit-autofill {
   border-style: outset;
   border-color: #dd9e37;
 }
-
-
 
 /* Estilos para la sección de presentación */
 
@@ -402,7 +412,7 @@ input#search-bar:-webkit-autofill {
   text-align: center;
 }
 
-.input-stats{
+.input-stats {
   background-color: rgb(60, 63, 70);
   border-radius: 4px;
   width: 40rem;
@@ -542,9 +552,7 @@ input#input-stats:-webkit-autofill {
   text-align: center;
 }
 #title_equipos img {
-
   width: 150px;
-
 }
 
 #button_equipos {
