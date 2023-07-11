@@ -10,7 +10,7 @@ createApp({
       correo: "",
       contrasena: "",
       favoritos: "",
-      url: "http://plasmads.pythonanywhere.com/cuentas/" + id,
+      url: "https://plasmads.pythonanywhere.com/cuentas/" + id,
     };
   },
   methods: {
@@ -48,7 +48,7 @@ createApp({
         .then(function () {
           alert("Registro modificado");
           window.location.href =
-            "http://plasmads.pythonanywhere.com/cuentas/" + id; // navega a cuentas.html
+            "https://plasmads.pythonanywhere.com/cuentas/" + id; // navega a cuentas.html
         })
         .catch((err) => {
           console.error(err);

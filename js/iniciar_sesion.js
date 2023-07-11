@@ -7,7 +7,7 @@ new Vue({
   },
   methods: {
     iniciarSesion() {
-      fetch("http://plasmads.pythonanywhere.com/cuentas")
+      fetch("https://plasmads.pythonanywhere.com/cuentas")
         .then((response) => response.json())
         .then((data) => {
           const objetoEncontrado = data.find(

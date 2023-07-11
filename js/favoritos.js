@@ -3,7 +3,7 @@ var busquedasRecientes = [];
 var ID = localStorage.getItem("id");
 
 function traerFavoritos() {
-  return fetch(`http://plasmads.pythonanywhere.com/cuentas/${ID}`)
+  return fetch(`https://plasmads.pythonanywhere.com/cuentas/${ID}`)
     .then((response) => response.json())
     .then((data) => {
       this.id = data.id;
@@ -81,7 +81,7 @@ function agregar(favorito) {
 }
 
 function modificarFavoritos(id, favoritosModificados) {
-  var url = `http://plasmads.pythonanywhere.com/cuentas/${ID}`;
+  var url = `https://plasmads.pythonanywhere.com/cuentas/${ID}`;
   traerFavoritos().then(() => {
     var datosModificados = {
       contrasena: contrasena,

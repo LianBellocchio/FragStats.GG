@@ -4,7 +4,7 @@ new Vue({
     cuentas: [],
     //url:'http://localhost:5000/cuentas',
     // si el backend esta corriendo local  usar localhost 5000(si no lo subieron a pythonanywhere)
-    url: "http://plasmads.pythonanywhere.com/cuentas", // si ya lo subieron a pythonanywhere
+    url: "https://plasmads.pythonanywhere.com/cuentas", // si ya lo subieron a pythonanywhere
     error: false,
     cargando: true,
     /*atributos para el guardar los valores del formulario */
