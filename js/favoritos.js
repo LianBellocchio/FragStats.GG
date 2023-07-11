@@ -11,18 +11,27 @@ function mostrarBusquedasRecientes() {
   busquedasRecientes.forEach((busqueda) => {
     var listItem = document.createElement("li");
     var link = document.createElement("a");
-    link.href = "#";
-    link.textContent = busqueda;
     link.addEventListener("click", function (event) {
       event.preventDefault();
-      agregar(busqueda);
+      scrollToElement("estadisticas");
+      var valorEnlace = event.target.textContent; // Obtener el valor del enlace
+      getStats(valorEnlace);
     });
+    link.textContent = busqueda;
+
     listItem.appendChild(link);
     recentSearchesContainer.appendChild(listItem);
   });
 
   // Mostrar el contenedor de búsquedas recientes
   recentSearchesContainer.style.display = "block";
+}
+
+function scrollToElement(elementId) {
+  var element = document.getElementById(elementId);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
 }
 
 document.getElementById("lupa").addEventListener("click", function (event) {
@@ -34,24 +43,42 @@ document.getElementById("search-bar").addEventListener("focus", function () {
   mostrarBusquedasRecientes();
 });
 
-document.getElementById("search-bar").addEventListener("blur", function () {
-  var recentSearchesContainer = document.getElementById("recent-searches");
+//Cerrar recent-searches
+const mainElement = document.querySelector("main");
+var recentSearchesContainer = document.getElementById("recent-searches");
+var searchInputElement = document.getElementById("search-bar");
+
+mainElement.addEventListener("click", function () {
   recentSearchesContainer.style.display = "none";
 });
 
-document.getElementById("search-bar").addEventListener("keydown", function (event) {
-  if (event.key === "Enter") {
-    getStats("#search-bar");
-    var searchTerm = event.target.value.trim();
-    if (searchTerm !== "") {
-      agregar(searchTerm);
-      event.target.value = "";
-    }
-    setTimeout(function () {
-      estadisticas.scrollIntoView({ behavior: "smooth" });
-    }, 1000);
+document.addEventListener("click", function (event) {
+  var targetElement = event.target;
+  if (
+    targetElement !== searchInputElement &&
+    !searchInputElement.contains(targetElement) &&
+    targetElement !== recentSearchesContainer &&
+    !recentSearchesContainer.contains(targetElement)
+  ) {
+    recentSearchesContainer.style.display = "none";
   }
 });
+
+document
+  .getElementById("search-bar")
+  .addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      getStats(document.getElementById("search-bar").value);
+      var searchTerm = event.target.value.trim();
+      if (searchTerm !== "") {
+        agregar(searchTerm);
+        event.target.value = "";
+      }
+      setTimeout(function () {
+        estadisticas.scrollIntoView({ behavior: "smooth" });
+      }, 1000);
+    }
+  });
 
 function agregar(favorito) {
   if (!busquedasRecientes.includes(favorito)) {
