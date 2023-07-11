@@ -1,5 +1,4 @@
-console.log(location.search); // lee los argumentos pasados a este formulario
-var id = localStorage.getItem("id"); // cuenta_update.html?id=1
+var id = localStorage.getItem("id");
 
 const { createApp } = Vue;
 createApp({
@@ -18,7 +17,6 @@ createApp({
       fetch(url)
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
           this.id = data.id;
           this.nombre = data.nombre;
           this.correo = data.correo;

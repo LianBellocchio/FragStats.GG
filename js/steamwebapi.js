@@ -3,8 +3,6 @@ function getStats(input) {
   const apiKey = "ae941d3c-598a-4fde-9b58-766e999f9c72"; /* Tracker.gg apikey */
   const url = `https://cors-anywhere.herokuapp.com/https://public-api.tracker.gg/v2/csgo/standard/profile/steam/${steamId}?TRN-Api-Key=${apiKey}`;
 
-  console.log(steamId);
-
   fetch(url, { mode: "cors" })
     .then((response) => {
       if (response.ok) {
