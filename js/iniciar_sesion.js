@@ -41,7 +41,10 @@ new Vue({
 
 // Ocultar registro y login y mostrar cerrar sesión cuando se está logueado
 window.addEventListener("load", function () {
-  if (localStorage.getItem("id") !== "") {
+  if (
+    localStorage.getItem("id") !== "" &&
+    localStorage.getItem("id") !== null
+  ) {
     document.querySelector(".registrado").style.display = "none";
     document.querySelector(".iniciado").style.display = "none";
     document.querySelector("#miCuenta").style.display = "inline";
