@@ -396,7 +396,8 @@ input#search-bar:-webkit-autofill {
 }
 /* Estilos para la sección de estadísticas */
 #estadisticas {
-  background-color: #fff;
+  color: #fff;
+  background-color: #24292e;
   padding: 50px;
   text-align: center;
 }
@@ -490,13 +491,12 @@ input#search-bar:-webkit-autofill {
 
 #title_equipos img,
 #title_equipos h2 {
-  display: inline-block;
   text-align: center;
 }
 #title_equipos img {
-  float: left;
+
   width: 150px;
-  margin-right: 10px;
+
 }
 
 #button_equipos {
