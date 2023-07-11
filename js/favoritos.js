@@ -29,56 +29,56 @@ function eliminar(favorito) {
 }
 
 function agregar(favorito) {
-    traerFavoritos().then(() => {
-      // Realizar búsqueda aquí
-      fetch(`https://api.tracker.gg/v2/search?platform=steam&query=${favorito}`)
-        .then((response) => response.json())
-        .then((data) => {
-          // Verificar si se encontraron resultados de búsqueda
-          if (data.data && data.data.length > 0) {
-            // Obtener el primer resultado de búsqueda (asumiendo que es el más relevante)
-            const resultado = data.data[0];
-            const nombre = resultado.attributes.name;
-            const tipo = resultado.type;
-  
-            // Realizar acciones basadas en el tipo de resultado (jugador, equipo, etc.)
-            if (tipo === "player") {
-              // Acciones para jugador
-              const jugadorId = resultado.id;
-              // Resto del código para agregar o eliminar el favorito
-            } else if (tipo === "team") {
-              // Acciones para equipo
-              const equipoId = resultado.id;
-              // Resto del código para agregar o eliminar el favorito
-            } else {
-              // Otro tipo de resultado
-              console.log("Tipo de resultado no compatible:", tipo);
-            }
-  
-            // Verificar si la búsqueda ya existe en las busquedasRecientes
-            if (!busquedasRecientes.includes(favorito)) {
-              busquedasRecientes.push(favorito);
-            }
-  
-            if (favoritos !== null && favoritos.indexOf(favorito) !== -1) {
-              eliminar(favorito);
-            } else {
-              if (favoritos === "" || favoritos === null) {
-                favoritos = favorito;
-              } else {
-                favoritos += "," + favorito;
-              }
-              modificarFavoritos(1, favoritos);
-            }
+  traerFavoritos().then(() => {
+    // Realizar búsqueda aquí
+    fetch(`https://api.tracker.gg/v2/search?platform=steam&query=${favorito}`)
+      .then((response) => response.json())
+      .then((data) => {
+        // Verificar si se encontraron resultados de búsqueda
+        if (data.data && data.data.length > 0) {
+          // Obtener el primer resultado de búsqueda (asumiendo que es el más relevante)
+          const resultado = data.data[0];
+          const nombre = resultado.attributes.name;
+          const tipo = resultado.type;
+
+          // Realizar acciones basadas en el tipo de resultado (jugador, equipo, etc.)
+          if (tipo === "player") {
+            // Acciones para jugador
+            const jugadorId = resultado.id;
+            // Resto del código para agregar o eliminar el favorito
+          } else if (tipo === "team") {
+            // Acciones para equipo
+            const equipoId = resultado.id;
+            // Resto del código para agregar o eliminar el favorito
           } else {
-            console.log("No se encontraron resultados de búsqueda");
+            // Otro tipo de resultado
+            console.log("Tipo de resultado no compatible:", tipo);
           }
-        })
-        .catch((error) => {
-          console.error("Error al realizar la búsqueda:", error);
-        });
-    });
-  }
+
+          // Verificar si la búsqueda ya existe en las busquedasRecientes
+          if (!busquedasRecientes.includes(favorito)) {
+            busquedasRecientes.push(favorito);
+          }
+
+          if (favoritos !== null && favoritos.indexOf(favorito) !== -1) {
+            eliminar(favorito);
+          } else {
+            if (favoritos === "" || favoritos === null) {
+              favoritos = favorito;
+            } else {
+              favoritos += "," + favorito;
+            }
+            modificarFavoritos(1, favoritos);
+          }
+        } else {
+          console.log("No se encontraron resultados de búsqueda");
+        }
+      })
+      .catch((error) => {
+        console.error("Error al realizar la búsqueda:", error);
+      });
+  });
+}
 
 function modificarFavoritos(id, favoritosModificados) {
   var url = `http://plasmads.pythonanywhere.com/cuentas/${ID}`;
@@ -156,7 +156,8 @@ document.getElementById("search-bar").addEventListener("blur", function () {
   recentSearchesContainer.style.display = "none";
 });
 
-document.getElementById("guardarFavorito").addEventListener("click", function (event) {
+// No existe el elemento guardarFavorito
+/* document.getElementById("guardarFavorito").addEventListener("click", function (event) {
   event.preventDefault();
   agregar(document.getElementById("favorito").value);
-});
+}); */

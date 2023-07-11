@@ -17,6 +17,10 @@ new Vue({
           if (objetoEncontrado) {
             if (objetoEncontrado.contrasena === this.contrasena) {
               localStorage.setItem("id", `${objetoEncontrado.id}`);
+              document.querySelector(".registrado").style.display = "none";
+              document.querySelector(".iniciado").style.display = "none";
+              document.querySelector("#cerrarSesion").style.display = "inline";
+              closeModal("login-modal");
               alert("Inicio de sesión correcto");
             } else {
               alert("Contraseña incorrecta");
@@ -34,3 +38,19 @@ new Vue({
     },
   },
 });
+
+// Ocultar registro y login y mostrar cerrar sesión cuando se está logueado
+window.addEventListener("load", function () {
+  if (localStorage.getItem("id") !== "") {
+    document.querySelector(".registrado").style.display = "none";
+    document.querySelector(".iniciado").style.display = "none";
+    document.querySelector("#cerrarSesion").style.display = "inline";
+  }
+});
+
+function cerrarSesion() {
+  localStorage.setItem("id", "");
+  document.querySelector("#cerrarSesion").style.display = "none";
+  document.querySelector(".registrado").style.display = "inline";
+  document.querySelector(".iniciado").style.display = "inline";
+}
