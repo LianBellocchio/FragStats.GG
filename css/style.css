@@ -144,12 +144,15 @@ input#search-bar:-webkit-autofill {
 }
 
 div#recent-searches {
-  position: fixed;
+  position: absolute;
   top: 60px;
-  width: 34%;
+  width: 40rem;
   text-align: initial;
   list-style-type: none;
   background: rgb(60, 63, 70);
+  padding: 3px 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .9);
 }
 
 .fa-svg {

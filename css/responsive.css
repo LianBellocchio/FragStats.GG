@@ -13,6 +13,11 @@
     margin-right: 15px !important;
   }
 
+  div#recent-searches{
+    width: 70% !important;
+    margin-left: 34px !important;
+  }
+
   .logo {
     height: 80px !important;
     margin-right: 0px !important;
@@ -88,6 +93,11 @@
 
   .search-bar .input-group {
     width: 100%;
+  }
+
+  div#recent-searches{
+    width: 54% !important;
+    margin-right: 32px;
   }
 
   .home-outer {
