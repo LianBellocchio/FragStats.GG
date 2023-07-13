@@ -62,7 +62,9 @@ createApp({
         .then((res) => res.text()) // or res.json()
         .then((res) => {
           alert("Registro Eliminado");
-          location.reload(); // recarga el json luego de eliminado el registro
+          localStorage.setItem("id", "");
+          window.location.href =
+            "https://lianbellocchio.github.io/FragStats.GG/";
         });
     },
   },
