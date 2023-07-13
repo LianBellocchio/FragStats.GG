@@ -45,8 +45,7 @@ createApp({
       fetch(this.url, options)
         .then(function () {
           alert("Registro modificado");
-          window.location.href =
-            "https://plasmads.pythonanywhere.com/cuentas/" + id; // navega a cuentas.html
+          location.reload();
         })
         .catch((err) => {
           console.error(err);
