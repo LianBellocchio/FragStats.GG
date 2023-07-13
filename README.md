@@ -17,9 +17,9 @@ Ver información de la partida en vivo, incluyendo los perfiles de los jugadores
 - jQuery
 - Steam Web API
 
-**Cómo utilizar FragStat.net:**
+**Cómo utilizar FragStats.gg:**
 
-1. Ir a la página web de FragStat.net
+1. Ir a la página web de FragStats.gg
 2. Ingresar el nombre de usuario de Steam del jugador que se quiere buscar
 3. Hacer clic en el botón "Buscar"
 4. Se mostrará la información del perfil del jugador, incluyendo su imagen, juegos jugados, tiempo en línea y estado.
