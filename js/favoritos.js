@@ -1,7 +1,6 @@
 var busquedasRecientes = [];
 
 function mostrarBusquedasRecientes() {
-  var searchInput = document.getElementById("search-bar");
   var recentSearchesContainer = document.getElementById("recent-searches");
 
   // Limpiar las búsquedas recientes anteriores
@@ -24,7 +23,9 @@ function mostrarBusquedasRecientes() {
   });
 
   // Mostrar el contenedor de búsquedas recientes
-  recentSearchesContainer.style.display = "block";
+  if (busquedasRecientes.length > 0) {
+    recentSearchesContainer.style.display = "block";
+  }
 }
 
 function scrollToElement(elementId) {
